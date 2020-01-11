@@ -1,0 +1,292 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+html,body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6rem
+}
+
+#home
+{
+    height: 100vh;
+    width: 100%;
+    background: url("../assets/backgrounds/h_img.jpg") center center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-content: center
+
+}
+
+#home div
+{
+    max-width: 960px;
+    height: 100%;
+    text-align: center;
+
+    color: white;
+
+    display: grid;
+    grid-template-rows: 2fr 2fr 1fr 1fr;
+    align-items: center
+}
+
+#home div img:first-child
+{
+    width: 50px;
+    align-self:end;
+    justify-self: center;
+
+    margin-bottom: 2rem;
+}
+
+#home div img:last-child
+{
+    width: 20px;
+    align-self:center;
+    justify-self: center
+}
+
+.welcome
+{
+    font-size: 4rem;
+    
+}
+.tag-line
+{
+   align-self: start
+}
+.mouse-click
+{
+    cursor: pointer;
+}
+
+/* about us */
+
+#about-us
+{
+    background: #EFF0E0;
+}
+
+.about-us-text
+{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    padding-bottom: 2rem;
+    color: #3c3c3c;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    align-items: center
+}
+
+/* services */
+#services
+{
+    background: url("../assets/backgrounds/s_image.jpg") center center/cover no-repeat;
+    color: white
+}
+
+.services-text
+{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    padding-bottom: 2rem;
+
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    align-items: center
+}
+
+/*What we do */
+
+#what-we-do
+{
+    background: #EFF0E0;
+}
+#what-we-do h1
+{
+    text-align: center;
+    padding: 3rem  0;
+    font-size: 1rem;
+}
+#what-we-do img
+{
+    width: 60px;
+    height: 60px;
+}
+.what-we-do-text
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5rem;
+    text-align: center;
+    padding-bottom: 2rem
+}
+.what-we-do-text p
+{
+    font-size: 1rem
+}
+
+/* portfolio */
+#portfolio img {
+    width: 100%;
+}
+.card {
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+.card:hover img {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+/* contact us */
+#contact-us
+{
+    height: 50vh;
+    background: url("../assets/backgrounds/c_image.jpg") center center/cover no-repeat;
+}
+
+#contact-us h1
+{
+    text-align: center;
+    color: white;
+    padding-top: 2rem
+}
+
+.contact
+{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.contact div
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+
+.contact div input
+{
+    height: 2rem;
+    width: 30%;
+    background: transparent;
+    padding: 0 1rem;
+    color: white;
+    border: 2px solid white
+}
+
+.contact div input::placeholder
+{
+    color: white;
+}
+
+.contact textarea
+{
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    box-sizing:border-box;
+    width: 100%;
+    height: 20vh;
+    background: transparent;
+    color: white;
+    border: 2px solid white
+}
+
+.contact textarea::placeholder
+{
+    color: white;
+}
+
+/*footer */
+#main-footer
+{
+    background: #EFF0E0
+}
+
+.footer
+{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-align: center;
+    color: #3d3b3c;
+}
+.social 
+{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+/*  making it responsive */
+@media(max-width :786px)
+{
+    .welcome
+    {
+        font-size: 2rem;
+    }
+    
+    .about-us-text
+    {
+        width: 100%;
+        grid-template-rows: 1fr 2fr 2fr;
+    }
+    .services-text
+    {
+        width: 100%;
+        grid-template-rows: 1fr 2fr 2fr;
+    }
+    .what-we-do-text
+    {
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+    }
+    .what-we-do-text div
+    {
+        padding: 1rem 0;
+    }
+    .portfolio
+    {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8,200px);
+    }
+    .social 
+    {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: 1rem
+
+    }
+    .contact
+    {
+        padding: 1rem;
+    }
+    .contact div input
+    {
+        box-sizing:border-box;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .contact div
+    {
+        flex-direction: column;
+        justify-content: space-around
+    }
+    
+}
